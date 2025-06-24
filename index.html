@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voz Ciudadana</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+    header { background-color: #2b3e50; color: white; padding: 1rem; text-align: center; }
+    nav { display: flex; justify-content: center; background-color: #1c2833; flex-wrap: wrap; }
+    nav a { color: white; padding: 1rem; text-decoration: none; }
+    nav a:hover { background-color: #34495e; }
+    .container { padding: 2rem; max-width: 1000px; margin: auto; background: white; }
+    .seccion { display: none; }
+    .active { display: block; }
+    .card { display: flex; background: #fff; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 1rem; overflow: hidden; }
+    .card img { width: 140px; height: auto; object-fit: cover; }
+    .card div { padding: 1rem; }
+    ul { padding-left: 1.2rem; }
+    footer { text-align: center; padding: 1rem; background: #2b3e50; color: white; margin-top: 2rem; }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.seccion');
+      sections.forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    window.onload = () => showSection('problema');
+  </script>
+</head>
+<body>
+<header>
+  <h1>Voz Ciudadana</h1>
+  <p>Fortaleciendo la democracia digital con derechos de cuarta generación</p>
+</header>
+<nav>
+  <a href="#" onclick="showSection('problema')">Problema</a>
+  <a href="#" onclick="showSection('candidatos')">Candidatos</a>
+  <a href="#" onclick="showSection('tecnologia')">Tecnología</a>
+  <a href="#" onclick="showSection('beneficios')">Beneficios</a>
+  <a href="#" onclick="showSection('contacto')">Contacto</a>
+</nav>
+<div class="container">
+<!-- CONTENIDO SE INSERTARÁ AQUÍ EN SIGUIENTE BLOQUE -->
+</div>
+<footer>
+  <p>&copy; 2025 Voz Ciudadana - Todos los derechos reservados</p>
+</footer>
+</body>
+</html>
